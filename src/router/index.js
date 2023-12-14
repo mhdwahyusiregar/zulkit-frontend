@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import DetailView from '../views/DetailView.vue'
+import PricingView from '../views/PricingView.vue'
+import SuccesView from '../views/SuccesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +25,19 @@ const router = createRouter({
       component: RegisterView
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'product',
       component: DetailView
+    },
+    {
+      path: '/pricing',
+      name: 'pricing',
+      component: PricingView
+    },
+    {
+      path: '/succes',
+      name: 'succes',
+      component: SuccesView
     },
   ]
 })
