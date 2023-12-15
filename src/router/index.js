@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import DetailView from '../views/DetailView.vue'
+import CategoriesView from '../views/CategoriesView.vue'
+import CategoryItems from '../views/CategoryItems.vue'
 import PricingView from '../views/PricingView.vue'
 import SuccesView from '../views/SuccesView.vue'
 
@@ -28,6 +30,16 @@ const router = createRouter({
       path: '/product/:id',
       name: 'product',
       component: DetailView
+    },
+    {
+      path: '/categories/',
+      name: 'categories',
+      component: CategoriesView
+    },
+    {
+      path: '/categories/:id',
+      name: 'category-items',
+      component: CategoryItems
     },
     {
       path: '/pricing',
