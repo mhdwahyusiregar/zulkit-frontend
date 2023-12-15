@@ -4,9 +4,8 @@ import { RouterLink } from 'vue-router';
 defineProps({
   title: String,
   image: String,
-  count: Number
+  count: Number,
 });
-
 </script>
 
 <template>
@@ -14,14 +13,17 @@ defineProps({
     <div class="overflow-hidden border border-gray-200 rounded-xl">
       <RouterLink to="/">
         <div class="m-4 overflow-hidden rounded-xl">
-          <img :alt="title" class="block w-full h-auto" :src="'/src/assets/img/' + image" />
+          <img :alt="title" class="block w-full h-auto" :src="image" />
           <!-- kita gunakan data binding -->
         </div>
       </RouterLink>
 
       <header class="px-4 mb-4 leading-tight">
         <h1 class="text-lg">
-          <RouterLink class="font-semibold text-black no-underline hover:underline" to="/">
+          <RouterLink
+            class="font-semibold text-black no-underline hover:underline"
+            to="/"
+          >
             {{ title }}
           </RouterLink>
         </h1>
